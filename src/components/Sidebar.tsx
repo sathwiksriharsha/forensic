@@ -30,7 +30,7 @@ export default function Sidebar({ isOpen, setIsOpen, isCollapsed = false, toggle
     {
       title: 'CASE',
       items: [
-        { name: 'Dashboard', path: '/', icon: LayoutDashboard },
+        { name: 'Dashboard', path: '/dashboard', icon: LayoutDashboard },
         { name: 'Evidence', path: '/evidence', icon: FolderSearch },
       ]
     },
