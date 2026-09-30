@@ -122,14 +122,12 @@ export default function Sidebar({ isOpen, setIsOpen, isCollapsed = false, toggle
 
       <div className="sidebar-footer">
         <Popover open={showProfilePopover} onOpenChange={setShowProfilePopover}>
-          <PopoverTrigger asChild>
-            <div className="user-info w-full hover:bg-[rgba(0,0,0,0.02)] transition-colors rounded-md" style={{ cursor: 'pointer' }}>
+          <PopoverTrigger render={<div className="user-info w-full hover:bg-[rgba(0,0,0,0.02)] transition-colors rounded-md" style={{ cursor: 'pointer' }} />}>
               <div className="user-avatar">Inv</div>
               <div className="user-details">
                 <div className="user-name">Investigator 01</div>
                 <div className="user-role font-mono">ID: LA-8429</div>
               </div>
-            </div>
           </PopoverTrigger>
           <PopoverContent side="top" align="start" className="w-[280px] p-0 mb-4 bg-white border border-[var(--border-light)] shadow-sm rounded-[6px] text-primary">
 

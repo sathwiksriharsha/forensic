@@ -30,11 +30,9 @@ export default function Topbar({ onMenuClick }: { onMenuClick?: () => void }) {
 
       <div className="topbar-right">
         <Popover open={showSystemStatus} onOpenChange={setShowSystemStatus}>
-          <PopoverTrigger asChild>
-            <div className="system-status" style={{ cursor: 'pointer' }}>
+          <PopoverTrigger render={<div className="system-status" style={{ cursor: 'pointer' }} />}>
               <span className="status-indicator"></span>
               <span className="status-text font-mono">System Nominal</span>
-            </div>
           </PopoverTrigger>
           <PopoverContent align="end" sideOffset={12} className="w-60 p-4 bg-[var(--bg-surface)] border border-[var(--border-light)] text-primary">
             <div className="font-semibold text-xs mb-4 uppercase tracking-widest text-secondary">System Status</div>
@@ -49,13 +47,11 @@ export default function Topbar({ onMenuClick }: { onMenuClick?: () => void }) {
         </Popover>
 
         <Popover open={showNotifications} onOpenChange={setShowNotifications}>
-          <PopoverTrigger asChild>
-            <div className="action-icons">
+          <PopoverTrigger render={<div className="action-icons" />}>
               <button className="icon-btn" aria-label="Alerts">
                 <Bell size={18} />
                 <span className="alert-badge">3</span>
               </button>
-            </div>
           </PopoverTrigger>
           <PopoverContent align="end" sideOffset={12} className="w-80 p-4 bg-[var(--bg-surface)] border border-[var(--border-light)] text-primary">
             <div className="font-semibold text-xs mb-4 uppercase tracking-widest text-secondary">Notifications</div>
