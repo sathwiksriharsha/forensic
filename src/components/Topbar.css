@@ -1,0 +1,127 @@
+.topbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.case-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.case-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-tertiary);
+}
+
+.case-number {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.topbar-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-app);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 4px 12px;
+  width: 100%;
+  max-width: 400px;
+  transition: border-color 0.15s;
+}
+
+.search-bar:focus-within {
+  border-color: var(--border-focus);
+}
+
+.search-icon {
+  color: var(--text-tertiary);
+  margin-right: 8px;
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 12px;
+  color: var(--text-primary);
+}
+
+.search-input::placeholder {
+  color: var(--text-tertiary);
+  font-family: var(--font-sans);
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.system-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--status-success);
+}
+
+.status-text {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.action-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: var(--radius-sm);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:hover {
+  background-color: var(--bg-surface-hover);
+  color: var(--text-primary);
+}
+
+.alert-badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background-color: var(--status-critical);
+  color: white;
+  font-size: 9px;
+  font-weight: 700;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

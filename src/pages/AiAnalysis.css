@@ -1,0 +1,54 @@
+.filter-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-light);
+  cursor: pointer;
+}
+
+.filter-item:hover {
+  background-color: var(--bg-surface-hover);
+}
+
+.filter-item:last-child {
+  border-bottom: none;
+}
+
+.ai-bounding-box {
+  position: absolute;
+  border: 1.5px solid;
+  pointer-events: none;
+}
+
+.ai-bounding-box.person {
+  border-color: #3B82F6;
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.ai-bounding-box.vehicle {
+  border-color: #8B5CF6;
+  background-color: rgba(139, 92, 246, 0.1);
+}
+
+.ai-box-label {
+  position: absolute;
+  top: -16px;
+  left: -1.5px;
+  color: #FFFFFF;
+  font-size: 9px;
+  padding: 1px 4px;
+}
+
+.ai-bounding-box.person .ai-box-label {
+  background-color: #3B82F6;
+}
+
+.ai-bounding-box.vehicle .ai-box-label {
+  background-color: #8B5CF6;
+}

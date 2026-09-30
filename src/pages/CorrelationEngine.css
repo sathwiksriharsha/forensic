@@ -1,0 +1,114 @@
+.correlation-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.tracking-sequence {
+  width: 100%;
+}
+
+.sequence-path {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background-color: var(--bg-app);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+}
+
+.path-node {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0.7;
+}
+
+.path-node.active {
+  opacity: 1;
+}
+
+.path-node.pending {
+  opacity: 0.4;
+}
+
+.node-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--border-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-inverse);
+}
+
+.node-icon.active {
+  background-color: var(--accent-blue);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+}
+
+.path-arrow {
+  color: var(--border-medium);
+}
+
+.video-matrix {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.matrix-cell {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.matrix-cell.active-cell {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 1px var(--accent-blue), var(--shadow-panel);
+}
+
+.matrix-video {
+  aspect-ratio: 16 / 9;
+  background-color: #0A0A0C;
+  position: relative;
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.matrix-video.active {
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+}
+
+.matrix-video.pending {
+  opacity: 0.6;
+}
+
+.matrix-footer {
+  padding: 12px 16px;
+  background-color: #FAFAFC;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.active-footer {
+  background-color: rgba(250, 204, 21, 0.1);
+  border-top-color: rgba(250, 204, 21, 0.3);
+}
+
+.bounding-box.inactive {
+  border-color: rgba(255,255,255,0.3);
+  background-color: rgba(255,255,255,0.05);
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}

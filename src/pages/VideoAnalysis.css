@@ -1,0 +1,161 @@
+.analysis-workspace {
+  display: flex;
+  gap: 16px;
+  height: calc(100vh - 180px);
+  min-height: 600px;
+}
+
+.workspace-side {
+  width: 280px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.workspace-center {
+  flex: 1;
+  min-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cam-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.cam-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-light);
+  cursor: pointer;
+}
+
+.cam-item:last-child {
+  border-bottom: none;
+}
+
+.cam-item:hover {
+  background-color: var(--bg-surface-hover);
+}
+
+.cam-item.active {
+  background-color: var(--bg-active);
+  border-left: 3px solid var(--accent-blue);
+}
+
+.cam-name {
+  font-size: 13px;
+  color: var(--text-primary);
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.px-16 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.pt-12 {
+  padding-top: 12px;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mt-12 {
+  margin-top: 12px;
+}
+
+.mr-12 {
+  margin-right: 12px;
+}
+
+.gap-2 {
+  gap: 8px;
+}
+
+.bounding-box {
+  position: absolute;
+  border: 2px solid #FACC15;
+  background-color: rgba(250, 204, 21, 0.1);
+  pointer-events: none;
+}
+
+.box-label {
+  position: absolute;
+  top: -20px;
+  left: -2px;
+  background-color: #FACC15;
+  color: #000;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 4px;
+}
+
+.timeline-segment {
+  position: absolute;
+  height: 100%;
+  top: 0;
+}
+
+.timeline-segment.normal {
+  background-color: var(--accent-blue);
+  opacity: 0.6;
+}
+
+.timeline-segment.motion {
+  background-color: #FACC15;
+  opacity: 0.8;
+}
+
+.timeline-segment.gap {
+  background-color: var(--status-critical);
+  opacity: 0.8;
+}
+
+.event-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-light);
+  cursor: pointer;
+}
+
+.event-item:hover {
+  background-color: var(--bg-surface-hover);
+}
+
+.event-item.active {
+  background-color: var(--bg-active);
+}
+
+.event-time {
+  font-size: 11px;
+  color: var(--text-secondary);
+  width: 50px;
+  flex-shrink: 0;
+}
+
+.event-content {
+  flex: 1;
+}

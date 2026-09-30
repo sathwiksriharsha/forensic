@@ -1,0 +1,13 @@
+.audit-table-container {
+  overflow-y: auto;
+  height: calc(100vh - 200px);
+}
+
+.audit-row:hover td {
+  background-color: var(--bg-surface-hover);
+}
+
+.audit-row td {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
